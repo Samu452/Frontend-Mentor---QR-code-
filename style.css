@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+
+  /* Typography */
+  --font-family: "Outfit", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-size-paragraph: 15px;
+
+  /* Layout */
+  --layout-mobile-width: 375px;
+  --layout-desktop-width: 1440px;
+}
+
+body {
+  background-color: var(--slate-300);
+  font-family: var(--font-family);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-regular);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.card {
+  grid-row: span 3 / span 3;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  background-color: var(--white);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.image-card {
+  width: 288px;
+  height: 288px;
+  border-radius: 10px;
+  margin: 16px;
+}
+.title {
+  font-weight: var(--font-weight-bold);
+  font-size: 22px;
+  padding: 0 16px;
+  color: var(--slate-900);
+}
+
+.paragraph {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-paragraph);
+  padding: 0 16px;
+  color: var(--slate-500);
+
+  margin: 0 16px 40px 16px;
+}
